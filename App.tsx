@@ -5,12 +5,15 @@
  * @format
  */
 
+import React from 'react';
 import { NewAppScreen } from '@react-native/new-app-screen';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
 import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+
+import NativeAdder from './src/NativeAdder';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -25,6 +28,13 @@ function App() {
 
 function AppContent() {
   const safeAreaInsets = useSafeAreaInsets();
+
+  React.useEffect(() => {
+    // @ts-ignore
+    NativeAdder.add(5, 7).then((result: number) => {
+      console.log('Result from C++:', result);
+    });
+  }, []);
 
   return (
     <View style={styles.container}>
