@@ -9,6 +9,25 @@
     "start": "react-native start",
     "test": "jest"
   },
+  "codegenConfig": {
+    "name": "NativeLocalStorageSpec",
+    "type": "modules",
+    "jsSrcsDir": "src/specs",
+    "android": {
+      "javaPackageName": "com.will.localStorage"
+    },
+    "ios": {
+      "modules": {
+        "NativeLocalStorage": {
+          "className": "NativeLocalStorage",
+          "unstableRequiresMainQueueSetup": false,
+          "conformsToProtocols": [
+            "TurboModule"
+          ]
+        }
+      }
+    }
+  },
   "dependencies": {
     "react": "19.1.0",
     "react-native": "0.81.4",
