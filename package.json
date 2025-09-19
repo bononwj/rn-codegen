@@ -17,14 +17,8 @@
       "javaPackageName": "com.will.localStorage"
     },
     "ios": {
-      "modules": {
-        "NativeLocalStorage": {
-          "className": "NativeLocalStorage",
-          "unstableRequiresMainQueueSetup": false,
-          "conformsToProtocols": [
-            "TurboModule"
-          ]
-        }
+      "modulesProvider": {
+        "NativeLocalStorage": "RCTNativeLocalStorage"
       }
     }
   },
