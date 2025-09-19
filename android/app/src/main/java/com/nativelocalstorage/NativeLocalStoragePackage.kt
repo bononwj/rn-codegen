@@ -9,11 +9,11 @@ import com.facebook.react.module.model.ReactModuleInfoProvider
 class NativeLocalStoragePackage : BaseReactPackage() {
 
     override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? =
-        (if (name == NativeLocalStorageModule.NAME) {
+        if (name == NativeLocalStorageModule.NAME) {
             NativeLocalStorageModule(reactContext)
         } else {
             null
-        }) as NativeModule?
+        }
 
     override fun getReactModuleInfoProvider() = ReactModuleInfoProvider {
         mapOf(

@@ -45,7 +45,7 @@ function App(): React.JSX.Element {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, paddingTop: 90 }}>
       <Text style={styles.text}>
         Current stored value is: {value ?? 'No Value'}
       </Text>
