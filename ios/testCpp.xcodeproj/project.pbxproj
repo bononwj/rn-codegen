@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-testCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-testCpp.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		5477B0482E7D2B7D005E6FE8 /* RCTWebView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5477B0472E7D2B7D005E6FE8 /* RCTWebView.mm */; };
+		5477B04B2E7D2C2A005E6FE8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5477B04A2E7D2C2A005E6FE8 /* WebKit.framework */; };
 		54993B122E7CFC86009B958E /* RCTNativeLocalStorage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 54993B112E7CFC86009B958E /* RCTNativeLocalStorage.mm */; };
 		54993B1B2E7D018D009B958E /* NativeSampleModuleProvider.mm in Sources */ = {isa = PBXBuildFile; fileRef = 54993B1A2E7D018D009B958E /* NativeSampleModuleProvider.mm */; };
 		54993B1C2E7D019E009B958E /* NativeSampleModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54993B142E7D00E2009B958E /* NativeSampleModule.cpp */; };
@@ -23,6 +25,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = testCpp/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = testCpp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-testCpp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testCpp.debug.xcconfig"; path = "Target Support Files/Pods-testCpp/Pods-testCpp.debug.xcconfig"; sourceTree = "<group>"; };
+		5477B0472E7D2B7D005E6FE8 /* RCTWebView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTWebView.mm; sourceTree = "<group>"; };
+		5477B0492E7D2B90005E6FE8 /* RCTWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTWebView.h; sourceTree = "<group>"; };
+		5477B04A2E7D2C2A005E6FE8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		54993B0F2E7CFC86009B958E /* testCpp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testCpp-Bridging-Header.h"; sourceTree = "<group>"; };
 		54993B102E7CFC86009B958E /* RCTNativeLocalStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTNativeLocalStorage.h; sourceTree = "<group>"; };
 		54993B112E7CFC86009B958E /* RCTNativeLocalStorage.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTNativeLocalStorage.mm; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5477B04B2E7D2C2A005E6FE8 /* WebKit.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-testCpp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,10 +70,20 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5477B04A2E7D2C2A005E6FE8 /* WebKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-testCpp.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5477B0462E7D2B3B005E6FE8 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				5477B0492E7D2B90005E6FE8 /* RCTWebView.h */,
+				5477B0472E7D2B7D005E6FE8 /* RCTWebView.mm */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		54993B0E2E7CFC4D009B958E /* NativeLocalStorage */ = {
@@ -99,6 +115,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				5477B0462E7D2B3B005E6FE8 /* WebView */,
 				54993B192E7D018D009B958E /* NativeSampleModuleProvider.h */,
 				54993B1A2E7D018D009B958E /* NativeSampleModuleProvider.mm */,
 				54993B152E7D00E2009B958E /* shared */,
@@ -279,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5477B0482E7D2B7D005E6FE8 /* RCTWebView.mm in Sources */,
 				54993B122E7CFC86009B958E /* RCTNativeLocalStorage.mm in Sources */,
 				54993B1B2E7D018D009B958E /* NativeSampleModuleProvider.mm in Sources */,
 				54993B1C2E7D019E009B958E /* NativeSampleModule.cpp in Sources */,

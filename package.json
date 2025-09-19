@@ -19,7 +19,9 @@
     "ios": {
       "modulesProvider": {
         "NativeLocalStorage": "RCTNativeLocalStorage",
-        "NativeSampleModule": "NativeSampleModuleProvider",
+        "NativeSampleModule": "NativeSampleModuleProvider"
+      },
+      "componentProvider": {
         "CustomWebView": "RCTWebView"
       }
     }

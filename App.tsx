@@ -10,7 +10,7 @@ import {
 
 import NativeLocalStorage from './src/specs/NativeLocalStorage';
 import NativeSampleModule from './src/specs/NativeSampleModule';
-import WebViewNativeComponent from './src/specs/WebViewNativeComponent';
+import CustomWebView from './src/specs/WebViewNativeComponent';
 
 const EMPTY = '<empty>';
 
@@ -60,8 +60,7 @@ function App(): React.JSX.Element {
       <Button title="Delete" onPress={deleteValue} />
       <Button title="Clear" onPress={clearAll} />
       <Button title="Reverse String" onPress={reverseString} />
-      <WebViewNativeComponent
-        sourceURL="https://react.dev/"
+      <CustomWebView
         style={{
           width: '100%',
           height: 200,
@@ -71,6 +70,7 @@ function App(): React.JSX.Element {
           paddingRight: 5,
           borderRadius: 5,
         }}
+        sourceURL="https://react.dev/"
         onScriptLoaded={() => {
           Alert.alert('Page Loaded');
         }}
