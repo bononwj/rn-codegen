@@ -10,15 +10,16 @@
     "test": "jest"
   },
   "codegenConfig": {
-    "name": "NativeLocalStorageSpec",
+    "name": "AppSpecs",
     "type": "modules",
     "jsSrcsDir": "src/specs",
     "android": {
-      "javaPackageName": "com.will.localStorage"
+      "javaPackageName": "com.will"
     },
     "ios": {
       "modulesProvider": {
-        "NativeLocalStorage": "RCTNativeLocalStorage"
+        "NativeLocalStorage": "RCTNativeLocalStorage",
+        "NativeSampleModule": "NativeSampleModuleProvider"
       }
     }
   },

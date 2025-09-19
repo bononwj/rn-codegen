@@ -10,6 +10,8 @@
 		0C80B921A6F3F58F76C31292 /* libPods-testCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-testCpp.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		54993B122E7CFC86009B958E /* RCTNativeLocalStorage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 54993B112E7CFC86009B958E /* RCTNativeLocalStorage.mm */; };
+		54993B1B2E7D018D009B958E /* NativeSampleModuleProvider.mm in Sources */ = {isa = PBXBuildFile; fileRef = 54993B1A2E7D018D009B958E /* NativeSampleModuleProvider.mm */; };
+		54993B1C2E7D019E009B958E /* NativeSampleModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54993B142E7D00E2009B958E /* NativeSampleModule.cpp */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		EFC77267117D95D8D26A9F8B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
@@ -24,6 +26,10 @@
 		54993B0F2E7CFC86009B958E /* testCpp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "testCpp-Bridging-Header.h"; sourceTree = "<group>"; };
 		54993B102E7CFC86009B958E /* RCTNativeLocalStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTNativeLocalStorage.h; sourceTree = "<group>"; };
 		54993B112E7CFC86009B958E /* RCTNativeLocalStorage.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTNativeLocalStorage.mm; sourceTree = "<group>"; };
+		54993B132E7D00E2009B958E /* NativeSampleModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeSampleModule.h; sourceTree = "<group>"; };
+		54993B142E7D00E2009B958E /* NativeSampleModule.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NativeSampleModule.cpp; sourceTree = "<group>"; };
+		54993B192E7D018D009B958E /* NativeSampleModuleProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeSampleModuleProvider.h; sourceTree = "<group>"; };
+		54993B1A2E7D018D009B958E /* NativeSampleModuleProvider.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NativeSampleModuleProvider.mm; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-testCpp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testCpp.release.xcconfig"; path = "Target Support Files/Pods-testCpp/Pods-testCpp.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-testCpp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testCpp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = testCpp/AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +80,15 @@
 			path = NativeLocalStorage;
 			sourceTree = "<group>";
 		};
+		54993B152E7D00E2009B958E /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				54993B132E7D00E2009B958E /* NativeSampleModule.h */,
+				54993B142E7D00E2009B958E /* NativeSampleModule.cpp */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +99,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				54993B192E7D018D009B958E /* NativeSampleModuleProvider.h */,
+				54993B1A2E7D018D009B958E /* NativeSampleModuleProvider.mm */,
+				54993B152E7D00E2009B958E /* shared */,
 				54993B0E2E7CFC4D009B958E /* NativeLocalStorage */,
 				13B07FAE1A68108700A75B9A /* testCpp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -262,6 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				54993B122E7CFC86009B958E /* RCTNativeLocalStorage.mm in Sources */,
+				54993B1B2E7D018D009B958E /* NativeSampleModuleProvider.mm in Sources */,
+				54993B1C2E7D019E009B958E /* NativeSampleModule.cpp in Sources */,
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

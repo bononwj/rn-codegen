@@ -1,16 +1,16 @@
 //
-//  RCTNativeLocalStorage.h
+//  NativeSampleModuleProvider.h
 //  testCpp
 //
 //  Created by 韦浩东 on 2025/9/19.
 //
 
 #import <Foundation/Foundation.h>
-#import <AppSpecs/AppSpecs.h>
+#import <ReactCommon/RCTTurboModule.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RCTNativeLocalStorage : NSObject <NativeLocalStorageSpec>
+@interface NativeSampleModuleProvider : NSObject <RCTModuleProvider>
 
 @end
 

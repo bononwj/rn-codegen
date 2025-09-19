@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import NativeLocalStorage from './src/specs/NativeLocalStorage';
+import NativeSampleModule from './src/specs/NativeSampleModule';
 
 const EMPTY = '<empty>';
 
@@ -36,6 +37,13 @@ function App(): React.JSX.Element {
     setValue('');
   }
 
+  function reverseString() {
+    const reversedString = NativeSampleModule?.reverseString(
+      editingValue ?? '',
+    );
+    setValue(reversedString);
+  }
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <Text style={styles.text}>
@@ -49,6 +57,7 @@ function App(): React.JSX.Element {
       <Button title="Save" onPress={saveValue} />
       <Button title="Delete" onPress={deleteValue} />
       <Button title="Clear" onPress={clearAll} />
+      <Button title="Reverse String" onPress={reverseString} />
     </SafeAreaView>
   );
 }
