@@ -10,6 +10,7 @@ import com.facebook.react.ReactPackage
 import com.facebook.react.defaults.DefaultReactHost.getDefaultReactHost
 import com.facebook.react.defaults.DefaultReactNativeHost
 import com.nativelocalstorage.NativeLocalStoragePackage
+import com.webview.ReactWebViewPackage
 
 
 class MainApplication : Application(), ReactApplication {
@@ -19,6 +20,7 @@ class MainApplication : Application(), ReactApplication {
         override fun getPackages(): List<ReactPackage> =
             PackageList(this).packages.apply {
                 add(NativeLocalStoragePackage())
+                add(ReactWebViewPackage())
             }
 
         override fun getJSMainModuleName(): String = "index"

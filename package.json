@@ -11,7 +11,7 @@
   },
   "codegenConfig": {
     "name": "AppSpecs",
-    "type": "modules",
+    "type": "all",
     "jsSrcsDir": "src/specs",
     "android": {
       "javaPackageName": "com.willapp.specs"
@@ -19,7 +19,8 @@
     "ios": {
       "modulesProvider": {
         "NativeLocalStorage": "RCTNativeLocalStorage",
-        "NativeSampleModule": "NativeSampleModuleProvider"
+        "NativeSampleModule": "NativeSampleModuleProvider",
+        "CustomWebView": "RCTWebView"
       }
     }
   },
