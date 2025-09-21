@@ -1,0 +1,76 @@
+{
+  "scenario": "basic_burst",
+  "description": "5张连续拍摄的照片",
+  "photos": [
+    {
+      "id": "IMG_001",
+      "filePath": "/storage/photos/IMG_001.jpg",
+      "fileName": "IMG_001.jpg",
+      "timestamp": 1627890000000,
+      "fileCreationTime": 1627890000000,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro",
+      "latitude": 40.7589,
+      "longitude": -73.9851
+    },
+    {
+      "id": "IMG_002",
+      "filePath": "/storage/photos/IMG_002.jpg",
+      "fileName": "IMG_002.jpg",
+      "timestamp": 1627890000500,
+      "fileCreationTime": 1627890000500,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro",
+      "latitude": 40.7589,
+      "longitude": -73.9851
+    },
+    {
+      "id": "IMG_003",
+      "filePath": "/storage/photos/IMG_003.jpg",
+      "fileName": "IMG_003.jpg",
+      "timestamp": 1627890001000,
+      "fileCreationTime": 1627890001000,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro",
+      "latitude": 40.7589,
+      "longitude": -73.9851
+    },
+    {
+      "id": "IMG_004",
+      "filePath": "/storage/photos/IMG_004.jpg",
+      "fileName": "IMG_004.jpg",
+      "timestamp": 1627890001500,
+      "fileCreationTime": 1627890001500,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro",
+      "latitude": 40.7589,
+      "longitude": -73.9851
+    },
+    {
+      "id": "IMG_005",
+      "filePath": "/storage/photos/IMG_005.jpg",
+      "fileName": "IMG_005.jpg",
+      "timestamp": 1627890002000,
+      "fileCreationTime": 1627890002000,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro",
+      "latitude": 40.7589,
+      "longitude": -73.9851
+    }
+  ],
+  "expectedGroups": [
+    {
+      "type": "BURST",
+      "photoCount": 5,
+      "photoIds": ["IMG_001", "IMG_002", "IMG_003", "IMG_004", "IMG_005"],
+      "minInterval": 500,
+      "maxInterval": 500,
+      "avgInterval": 500
+    }
+  ]
+}

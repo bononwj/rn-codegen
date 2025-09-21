@@ -1,0 +1,82 @@
+{
+  "scenario": "performance_test",
+  "description": "大量照片性能测试数据生成配置",
+  "configuration": {
+    "totalPhotos": 10000,
+    "burstGroups": 50,
+    "avgBurstSize": 8,
+    "timeSpanDays": 365,
+    "expectedProcessingTimeMs": 500,
+    "memoryLimitMB": 100
+  },
+  "testCases": [
+    {
+      "name": "small_dataset",
+      "photoCount": 100,
+      "burstCount": 5,
+      "expectedTimeMs": 50
+    },
+    {
+      "name": "medium_dataset",
+      "photoCount": 1000,
+      "burstCount": 20,
+      "expectedTimeMs": 100
+    },
+    {
+      "name": "large_dataset",
+      "photoCount": 10000,
+      "burstCount": 50,
+      "expectedTimeMs": 500
+    },
+    {
+      "name": "extra_large_dataset",
+      "photoCount": 50000,
+      "burstCount": 200,
+      "expectedTimeMs": 2000
+    }
+  ],
+  "cameraModels": [
+    "iPhone 12 Pro",
+    "iPhone 13 Pro",
+    "iPhone 14 Pro",
+    "Samsung Galaxy S21",
+    "Google Pixel 6",
+    "Canon EOS R5",
+    "Sony A7R IV"
+  ],
+  "burstPatterns": [
+    {
+      "name": "fast_burst",
+      "intervalMs": 200,
+      "variance": 50,
+      "minSize": 5,
+      "maxSize": 15
+    },
+    {
+      "name": "normal_burst",
+      "intervalMs": 500,
+      "variance": 100,
+      "minSize": 3,
+      "maxSize": 10
+    },
+    {
+      "name": "slow_burst",
+      "intervalMs": 1000,
+      "variance": 200,
+      "minSize": 3,
+      "maxSize": 8
+    }
+  ],
+  "timeDistribution": {
+    "daySpread": true,
+    "nightPercentage": 20,
+    "weekendPercentage": 30,
+    "holidayPercentage": 15
+  },
+  "gpsVariation": {
+    "enableGps": true,
+    "locationCount": 10,
+    "maxDistanceMeters": 1000,
+    "accuracyVariance": 5
+  }
+}

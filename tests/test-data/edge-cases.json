@@ -1,0 +1,192 @@
+{
+  "scenario": "edge_cases",
+  "description": "边界情况和特殊场景测试数据",
+  "testCases": [
+    {
+      "name": "timestamp_edge_cases",
+      "description": "时间戳边界情况",
+      "photos": [
+        {
+          "id": "EDGE_001",
+          "fileName": "EDGE_001.jpg",
+          "filePath": "/photos/EDGE_001.jpg",
+          "timestamp": 0,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro"
+        },
+        {
+          "id": "EDGE_002",
+          "fileName": "EDGE_002.jpg",
+          "filePath": "/photos/EDGE_002.jpg",
+          "timestamp": 9223372036854775807,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro"
+        }
+      ]
+    },
+    {
+      "name": "duplicate_timestamps",
+      "description": "相同时间戳的照片",
+      "photos": [
+        {
+          "id": "DUP_001",
+          "fileName": "DUP_001.jpg",
+          "filePath": "/photos/DUP_001.jpg",
+          "timestamp": 1627890000000,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro"
+        },
+        {
+          "id": "DUP_002",
+          "fileName": "DUP_002.jpg",
+          "filePath": "/photos/DUP_002.jpg",
+          "timestamp": 1627890000000,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro"
+        },
+        {
+          "id": "DUP_003",
+          "fileName": "DUP_003.jpg",
+          "filePath": "/photos/DUP_003.jpg",
+          "timestamp": 1627890000000,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro"
+        }
+      ]
+    },
+    {
+      "name": "mixed_camera_models",
+      "description": "不同相机型号的连拍",
+      "photos": [
+        {
+          "id": "MIX_001",
+          "fileName": "MIX_001.jpg",
+          "filePath": "/photos/MIX_001.jpg",
+          "timestamp": 1627890000000,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro"
+        },
+        {
+          "id": "MIX_002",
+          "fileName": "MIX_002.jpg",
+          "filePath": "/photos/MIX_002.jpg",
+          "timestamp": 1627890000500,
+          "width": 4000,
+          "height": 3000,
+          "cameraModel": "Samsung Galaxy S21"
+        },
+        {
+          "id": "MIX_003",
+          "fileName": "MIX_003.jpg",
+          "filePath": "/photos/MIX_003.jpg",
+          "timestamp": 1627890001000,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro"
+        }
+      ]
+    },
+    {
+      "name": "gps_edge_cases",
+      "description": "GPS坐标边界情况",
+      "photos": [
+        {
+          "id": "GPS_001",
+          "fileName": "GPS_001.jpg",
+          "filePath": "/photos/GPS_001.jpg",
+          "timestamp": 1627890000000,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro",
+          "latitude": 90.0,
+          "longitude": 180.0
+        },
+        {
+          "id": "GPS_002",
+          "fileName": "GPS_002.jpg",
+          "filePath": "/photos/GPS_002.jpg",
+          "timestamp": 1627890000500,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro",
+          "latitude": -90.0,
+          "longitude": -180.0
+        },
+        {
+          "id": "GPS_003",
+          "fileName": "GPS_003.jpg",
+          "filePath": "/photos/GPS_003.jpg",
+          "timestamp": 1627890001000,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro",
+          "latitude": 0.0,
+          "longitude": 0.0
+        }
+      ]
+    },
+    {
+      "name": "file_name_patterns",
+      "description": "各种文件名模式测试",
+      "photos": [
+        {
+          "id": "PATTERN_001",
+          "fileName": "IMG_0001.jpg",
+          "filePath": "/photos/IMG_0001.jpg",
+          "timestamp": 1627890000000,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro"
+        },
+        {
+          "id": "PATTERN_002",
+          "fileName": "IMG_0002.jpg",
+          "filePath": "/photos/IMG_0002.jpg",
+          "timestamp": 1627890000500,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro"
+        },
+        {
+          "id": "PATTERN_003",
+          "fileName": "DSC_001.jpg",
+          "filePath": "/photos/DSC_001.jpg",
+          "timestamp": 1627890001000,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "Nikon D850"
+        },
+        {
+          "id": "PATTERN_004",
+          "fileName": "DSC_002.jpg",
+          "filePath": "/photos/DSC_002.jpg",
+          "timestamp": 1627890001500,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "Nikon D850"
+        },
+        {
+          "id": "PATTERN_005",
+          "fileName": "random_name.jpg",
+          "filePath": "/photos/random_name.jpg",
+          "timestamp": 1627890002000,
+          "width": 4032,
+          "height": 3024,
+          "cameraModel": "iPhone 12 Pro"
+        }
+      ]
+    }
+  ],
+  "expectedBehavior": {
+    "duplicate_timestamps": "应该基于其他信息（如文件名、GPS等）进行区分",
+    "mixed_cameras": "不同相机型号的照片不应该被归为同一连拍组",
+    "gps_extremes": "极值GPS坐标应该被正确处理",
+    "file_patterns": "支持多种文件名模式的序列识别"
+  }
+}

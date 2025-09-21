@@ -1,0 +1,154 @@
+{
+  "scenario": "mixed_photos",
+  "description": "包含连拍、单张、时间间隔大的照片的混合场景",
+  "photos": [
+    {
+      "id": "IMG_001",
+      "fileName": "IMG_001.jpg",
+      "filePath": "/photos/IMG_001.jpg",
+      "timestamp": 1627890000000,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_002",
+      "fileName": "IMG_002.jpg",
+      "filePath": "/photos/IMG_002.jpg",
+      "timestamp": 1627890000800,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_003",
+      "fileName": "IMG_003.jpg",
+      "filePath": "/photos/IMG_003.jpg",
+      "timestamp": 1627890001600,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_004",
+      "fileName": "IMG_004.jpg",
+      "filePath": "/photos/IMG_004.jpg",
+      "timestamp": 1627890035000,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_005",
+      "fileName": "IMG_005.jpg",
+      "filePath": "/photos/IMG_005.jpg",
+      "timestamp": 1627890120000,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_006",
+      "fileName": "IMG_006.jpg",
+      "filePath": "/photos/IMG_006.jpg",
+      "timestamp": 1627890120500,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_007",
+      "fileName": "IMG_007.jpg",
+      "filePath": "/photos/IMG_007.jpg",
+      "timestamp": 1627890121000,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_008",
+      "fileName": "IMG_008.jpg",
+      "filePath": "/photos/IMG_008.jpg",
+      "timestamp": 1627890121500,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_009",
+      "fileName": "IMG_009.jpg",
+      "filePath": "/photos/IMG_009.jpg",
+      "timestamp": 1627890122000,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_010",
+      "fileName": "IMG_010.jpg",
+      "filePath": "/photos/IMG_010.jpg",
+      "timestamp": 1627890122500,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_011",
+      "fileName": "IMG_011.jpg",
+      "filePath": "/photos/IMG_011.jpg",
+      "timestamp": 1627890123000,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    },
+    {
+      "id": "IMG_012",
+      "fileName": "IMG_012.jpg",
+      "filePath": "/photos/IMG_012.jpg",
+      "timestamp": 1627890300000,
+      "width": 4032,
+      "height": 3024,
+      "cameraModel": "iPhone 12 Pro"
+    }
+  ],
+  "expectedGroups": [
+    {
+      "type": "BURST",
+      "photoCount": 3,
+      "photoIds": ["IMG_001", "IMG_002", "IMG_003"],
+      "description": "第一组连拍 - 3张照片，间隔0.8秒"
+    },
+    {
+      "type": "SINGLE",
+      "photoCount": 1,
+      "photoIds": ["IMG_004"],
+      "description": "单张照片 - 与前一组间隔33秒"
+    },
+    {
+      "type": "BURST",
+      "photoCount": 7,
+      "photoIds": [
+        "IMG_005",
+        "IMG_006",
+        "IMG_007",
+        "IMG_008",
+        "IMG_009",
+        "IMG_010",
+        "IMG_011"
+      ],
+      "description": "第二组连拍 - 7张照片，间隔0.5秒"
+    },
+    {
+      "type": "SINGLE",
+      "photoCount": 1,
+      "photoIds": ["IMG_012"],
+      "description": "单张照片 - 与前一组间隔3分钟"
+    }
+  ],
+  "testConfig": {
+    "maxTimeGapMs": 2000,
+    "minBurstSize": 3,
+    "enableGpsAnalysis": false,
+    "enableSimilarityCheck": false
+  }
+}
